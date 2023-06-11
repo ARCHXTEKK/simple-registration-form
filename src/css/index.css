@@ -25,16 +25,20 @@ body {
   padding: 27px 18px;
   box-shadow: -6px 6px 10px rgba(0, 0, 0, 0.15);
 }
-.form label {
+.form .form__el {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.form .form__el label {
   margin-bottom: 5px;
 }
-.form input {
+.form .form__el input {
   font-size: 15px;
   color: #333333;
   font-weight: 400;
   font-family: "Montserrat", "sans-serif";
   background-color: #d8d8d8;
-  margin-bottom: 20px;
   padding: 10px;
 }
 
@@ -89,4 +93,22 @@ body {
 .btn:active {
   background-color: #317ceb;
   transform: scale(0.97);
+}
+
+.missed-value {
+  font-size: 14px;
+  color: red;
+  font-weight: 300;
+  font-family: "Montserrat", "sans-serif";
+}
+
+#success-message {
+  padding: 50px 5px;
+  background-color: #52aaf1;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 18;
+  color: #fff;
+  font-weight: 400;
+  font-family: "Montserrat", "sans-serif";
 }

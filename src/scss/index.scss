@@ -28,16 +28,20 @@ body {
     width: 480px;
     margin: 50px auto;
     padding: 27px 18px;
-    label {
-        margin-bottom: 5px;
-    }
-    input {
-        @include Text(15px, #333333);
-        background-color: #d8d8d8;
-        margin-bottom: 20px;
-        padding: 10px;
-    }
     box-shadow: -6px 6px 10px rgba(0, 0, 0, 0.15);
+    .form__el {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        label {
+            margin-bottom: 5px;
+        }
+        input {
+            @include Text(15px, #333333);
+            background-color: #d8d8d8;
+            padding: 10px;
+        }
+    }
 }
 
 .form__inner {
@@ -91,4 +95,16 @@ body {
         background-color: #317ceb;
         transform: scale(0.97);
     }
+}
+
+.missed-value {
+    @include Text(14px, red, 300);
+}
+
+#success-message {
+    padding: 50px 5px;
+    background-color: #52aaf1;
+    margin-bottom: 10px;
+    text-align: center;
+    @include Text($color: #fff);
 }
