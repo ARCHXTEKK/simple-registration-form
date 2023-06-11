@@ -18,18 +18,22 @@ class App extends React.Component {
     return(
       <div className="app">
         <form className="form">
-          <label for="inp-first-name">First name</label>
+          <label htmlFor="inp-first-name">First name</label>
           <input id="inp-first-name" type="text"/>
 
-          <label for="inp-last-name">Surname</label>
+          <label htmlFor="inp-last-name">Surname</label>
           <input id="inp-last-name" type="text"/>
 
-          <label for="inp-email">E-mail</label>
+          <label htmlFor="inp-email">E-mail</label>
           <input id="inp-email" type="email"/>
 
-          <label for="inp-pswd">Password</label>
+          <label htmlFor="inp-pswd">Password</label>
           <input id="inp-pswd" type={this.state.password ? "text" : "password"}/>
-          <input type="checkbox" onChange={this.togglePassword} id="inp-pswd-checkbox"/>
+
+          <div className="form__inner">
+            <input type="checkbox" onChange={this.togglePassword} id="inp-pswd-checkbox"/>
+            <label htmlFor="inp-pswd-checkbox">Show password</label>
+          </div>
 
           <button type="button" className="btn">Registration</button>
         </form>
